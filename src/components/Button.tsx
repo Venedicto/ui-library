@@ -1,4 +1,5 @@
 import classNames from "classnames";
+import React from "react";
 
 enum ButtonVariants {
 	outline = "outline",
@@ -10,7 +11,7 @@ export interface ButtonProps {
 	variants: "outline" | "default";
 	color?: "black" | "white" | "red" | "blue" | "green" | "yellow";
 	size?: "string";
-	children: React.ReactNode;
+	children: React.ReactNode | React.ReactElement;
 	href?: string;
 	type?: "button" | "submit" | "reset";
 	className?: string;

@@ -1,5 +1,6 @@
 import { ImCross } from "react-icons/im";
 import { Spinner } from "@nextui-org/react";
+import React from "react";
 
 export interface WithLoadingProps {
 	isLoading: boolean;

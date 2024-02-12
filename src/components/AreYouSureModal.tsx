@@ -7,6 +7,7 @@ import {
 	ModalFooter,
 } from "@nextui-org/react";
 import classNames from "classnames";
+
 export interface AreYouSureModalProps {
 	open: boolean;
 	onClose: () => void;

@@ -1,23 +1,13 @@
 import { NextUIProvider } from "@nextui-org/react";
-import Select from "./components/Select";
-import WithLoading from "./components/WithLoading";
-import { ChangeEvent } from "react";
+import React from "react";
+
 import Modal from "./components/Modal";
 import useModal from "./hooks/useModal";
 import Button from "./components/Button";
 
 export default function App() {
 	const modal = useModal();
-	const nflPlayers = [
-		{
-			label: "Tom Brady",
-			value: "Tom Brady",
-		},
-		{
-			label: "Patrick Mahomes",
-			value: "Patrick Mahomes",
-		},
-	];
+
 	return (
 		<NextUIProvider>
 			<div className="bg-black h-screen">
