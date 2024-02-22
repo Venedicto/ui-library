@@ -11,6 +11,7 @@ export interface SelectProps {
 	errorMessage?: string;
 	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 	register?: any;
+	value?: string;
 	isLoading?: boolean;
 	textAlign?: "center" | "left";
 	onChange?: (e: React.ChangeEvent<HTMLSelectElement>) => void;
@@ -28,6 +29,7 @@ export default function Select({
 	size = "sm",
 	register,
 	name,
+	value,
 }: SelectProps) {
 	return (
 		<S
@@ -39,6 +41,7 @@ export default function Select({
 			classNames={{
 				value: `text-${textAlign}`,
 			}}
+			selectedKeys={value ? [value] : undefined}
 			className={className}
 			onChange={onChange}
 			errorMessage={!isValid && errorMessage}

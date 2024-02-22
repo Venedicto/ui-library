@@ -18,7 +18,7 @@ export default function TextInput({
 	...props
 }: TextInputProps) {
 	return (
-		<div className="py-10  w-screen px-10 lg:px-80">
+		<div className="py-10  w-full px-10 lg:px-80">
 			<Input
 				isInvalid={!isValid}
 				errorMessage={!isValid && errorMessage}
