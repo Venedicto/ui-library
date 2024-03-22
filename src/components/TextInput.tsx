@@ -1,4 +1,5 @@
 import { Input } from "@nextui-org/react";
+import classNames from "classnames";
 
 export interface TextInputProps
 	extends React.InputHTMLAttributes<HTMLInputElement> {
@@ -18,7 +19,13 @@ export default function TextInput({
 	...props
 }: TextInputProps) {
 	return (
-		<div className="py-10  w-full">
+		<div
+			className={classNames({
+				"py-10  w-full": !props.className,
+				// biome-ignore lint/style/noNonNullAssertion: <explanation>
+				[props.className!]: props.className,
+			})}
+		>
 			<Input
 				isInvalid={!isValid}
 				errorMessage={!isValid && errorMessage}
