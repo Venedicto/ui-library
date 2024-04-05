@@ -40,6 +40,7 @@ export default function AreYouSureModal({
 }: AreYouSureModalProps) {
 	return (
 		<Modal
+			placement="center"
 			className={classNames("bg-black", classNamecontainer)}
 			isOpen={open}
 			onClose={() => {

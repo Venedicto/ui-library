@@ -44,6 +44,7 @@ export default function Modal({
 }: ModalProps) {
 	return (
 		<NextUiModal
+			placement="center"
 			className={classNames("bg-black", classNamecontainer)}
 			isOpen={open}
 			onClose={() => {
